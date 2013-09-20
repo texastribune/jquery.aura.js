@@ -54,10 +54,10 @@
     var position = this.position();
     $helper
       .css({
-        height: this.height(),
+        height: this.outerHeight(),
         left: position.left - cssPxDistance.left,
         top: position.top - cssPxDistance.top,
-        width: this.width()
+        width: this.outerWidth()
       });
     if (callback) {
       $helper
