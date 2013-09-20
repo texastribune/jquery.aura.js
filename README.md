@@ -8,6 +8,13 @@ Trigger a callback when the mouse gets within a 40 pixel box around `<div id="ca
 
     $('#cake').aura(40, function () { alert('Remember your diet!'); });
 
+You can also specify the box as if you were defining css padding (pixels only):
+
+    $('#cookies').aura('40px 30px 20px 10px', function () { alert("I'll jsut have one"); });
+
+### [Demo][demo]
+
+  [demo]: http://texastribune.github.io/jquery.aura.js/demo/
 
 ## Prior art
 
