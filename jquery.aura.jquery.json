@@ -1,0 +1,17 @@
+{
+  "name": "jquery.aura",
+  "version": "0.0.0",
+  "title": "jquery.aura",
+  "author": {
+    "name": "The Texas Tribune"
+  },
+  "licenses": [
+    {
+      "type": "Apache",
+      "url": "http://opensource.org/licenses/Apache"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  }
+}
