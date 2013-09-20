@@ -40,6 +40,8 @@
   };
 
 
+  var NAME = 'aura';
+
   // add an aura to an element. if the mouse enters this aura, trigger a callback
   $.fn.aura = function(distance, callback) {
     if (!this.length) {
@@ -60,7 +62,7 @@
       });
     if (callback) {
       $helper
-        .on('mouseover.aura', function() {
+        .on('mouseover.' + NAME, function() {
           callback.call(undefined);  // what should 'this' be?
           $helper.remove();
         });
@@ -68,8 +70,8 @@
     } else {
       var dfd = new $.Deferred();
       $helper
-        .on('mouseover.aura', function() {
-          dfd.resolve('aura');
+        .on('mouseover.' + NAME, function() {
+          dfd.resolve(NAME);
           $helper.remove();
         });
       return dfd.promise();
