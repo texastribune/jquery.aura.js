@@ -12,6 +12,7 @@
     }
   ],
   "dependencies": {
-    "jquery": "*"
-  }
+    "jquery": ">=1.5"
+  },
+  "demo": "http://texastribune.github.io/jquery.aura.js/demo/"
 }

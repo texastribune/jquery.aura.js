@@ -19,8 +19,9 @@ module.exports = (grunt) ->
       options:
         source: grunt.file.readJSON 'package.json'
         overrides:
+          demo: 'http://texastribune.github.io/jquery.aura.js/demo/'
           dependencies:
-            jquery: '*'
+            jquery: '>=1.5'
 
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-jshint'

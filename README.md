@@ -12,6 +12,12 @@ You can also specify the box as if you were defining css padding (pixels only):
 
     $('#cookies').aura('40px 30px 20px 10px', function () { alert("I'll jsut have one"); });
 
+You can also specify the callback promises[promise] style:
+
+    $('#pie').aura(15).then(function () { alert('3.14159265359'); });
+
+  [promise]: http://api.jquery.com/deferred.promise/
+
 ### [Demo][demo]
 
   [demo]: http://texastribune.github.io/jquery.aura.js/demo/
