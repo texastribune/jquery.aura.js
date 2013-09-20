@@ -43,7 +43,7 @@
   // add an aura to an element. if the mouse enters this aura, trigger a callback
   $.fn.aura = function(distance, callback) {
     if (!this.length || !callback) {
-      return;
+      return this;
     }
     var cssPxDistance = cssShorthandDistances(distance);
     var $helper = $('<div class="ui-aura-helper" style="box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; position: absolute; z-index: 999"/>')
@@ -63,6 +63,7 @@
         top: position.top - cssPxDistance.top,
         width: this.width()
       });
+    return this;
   };
 
 })(window.jQuery);
