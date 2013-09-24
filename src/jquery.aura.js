@@ -47,11 +47,15 @@
     if (!this.length) {
       return this;
     }
-    var cssPxDistance = cssShorthandDistances(distance);
+    // TODO only works for one element in 'this'
+    var cssPxDistance = cssShorthandDistances(distance),
+        offsetParent = this.offsetParent();
+    if (offsetParent.is('html')) {
+      offsetParent = document.body;
+    }
     var $helper = $('<div class="ui-aura-helper" style="box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; position: absolute; z-index: 999"/>')
       .css('padding', "" + cssPxDistance)
-      .appendTo(document.body); // XXX works for now
-    // FIXME only works for one element
+      .appendTo(offsetParent);
     var position = this.position();
     $helper
       .css({
