@@ -1,4 +1,4 @@
-/* jquery.aura - v0.0.0 - 2013-09-24 */
+/* jquery.aura - v0.1.0 - 2013-10-07 */
 (function ($) {
   "use strict";
 
