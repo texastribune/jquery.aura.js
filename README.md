@@ -3,6 +3,24 @@ jquery.aura.js
 
 Allows you to trigger code when the mouse gets near an element.
 
+### Why
+
+We use it to start loading expensive resources when we think a user is about to
+ask for them. This way, we trade always taking a bit hit up front with always
+taking a small hit for this library to sometimes taking a big hit later without
+adding delays. The problem with using mouse events directly with the element is
+that by the time a user's mouse is over a button, it's too late to start
+preloading that button's interaction.
+
+### How
+
+jquery.aura.js works by injecting invisible helper elements on top of your
+page, and detecting when the mouse moves over it. If you're watching for mouse
+events, these helper elements shouldn't interfere because they remove
+themselves from the DOM the moment they get activated. If this script does not
+work for you, there are alternatives, see the [Prior Art] section.
+
+
 Usage
 -----
 
