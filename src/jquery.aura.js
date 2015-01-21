@@ -53,7 +53,9 @@
     if (offsetParent.is('html')) {
       offsetParent = document.body;
     }
-    var $helper = $('<div class="ui-aura-helper" style="box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; position: absolute; z-index: 999"/>')
+    // is a div really the best element to use? what about ins?
+    // having so much inline css smells funny to me
+    var $helper = $('<div class="ui-aura-helper" aria-hidden="true" style="box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; position: absolute; z-index: 999"/>')
       .css('padding', "" + cssPxDistance)
       .appendTo(offsetParent);
     var position = this.position();
