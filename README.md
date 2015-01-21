@@ -1,8 +1,10 @@
-# jquery.aura.js
+jquery.aura.js
+==============
 
 Allows you to trigger code when the mouse gets near an element.
 
-## Usage
+Usage
+-----
 
 Trigger a callback when the mouse gets within a 40 pixel box around `<div id="cake"/>`:
 
@@ -18,11 +20,29 @@ You can also specify the callback [promise] style:
 
   [promise]: http://api.jquery.com/deferred.promise/
 
-## [Demo][demo]
+[Demo][demo]
+------------
 
   [demo]: http://texastribune.github.io/jquery.aura.js/demo/
 
-## Prior art
+
+For Developers
+--------------
+
+### Getting started
+
+```bash
+# install requirements
+npm install
+
+
+# do a build
+grunt
+```
+
+
+Prior art
+---------
 
 * https://github.com/e-sites/perimeter.js
 
